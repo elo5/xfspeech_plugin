@@ -42,8 +42,6 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: GestureDetector(
             child: Text(iflyResultString),
-//            onTapDown: onTapDown,
-//            onTapUp: onTapUp,
           ),
         ),
 

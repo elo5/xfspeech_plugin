@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49fd0067-5914-4b5b-8ce6-a1b5383e333b" name="Default Changelist" comment="" />
+    <list default="true" id="49fd0067-5914-4b5b-8ce6-a1b5383e333b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/lilplugins/xf_speech_plugin/XfSpeechDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/lilplugins/xf_speech_plugin/XfSpeechDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/lilplugins/xf_speech_plugin/XfSpeechPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/lilplugins/xf_speech_plugin/XfSpeechPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/android/src/main/java/com/lilplugins/xf_speech_plugin/XfSpeechDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/android/src/main/java/com/lilplugins/xf_speech_plugin/XfSpeechDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/android/src/main/java/com/lilplugins/xf_speech_plugin/XfSpeechPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/android/src/main/java/com/lilplugins/xf_speech_plugin/XfSpeechPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/XfSpeechPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/XfSpeechPlugin.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/xf_speech_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/xf_speech_plugin.dart" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -19,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/xf_speech_plugin.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
-              <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+            <state relative-caret-position="2254">
+              <caret line="161" selection-start-line="161" selection-end-line="161" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -31,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1218">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="616">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -44,8 +53,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="84">
-                <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <first_editor relative-caret-position="196">
+                <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
               </first_editor>
               <second_editor />
             </state>
@@ -71,6 +80,9 @@
       <replace>XfSpeechPlugin</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -78,8 +90,8 @@
         <option value="$PROJECT_DIR$/test/xf_speech_plugin_test.dart" />
         <option value="$PROJECT_DIR$/ios/xf_speech_plugin.podspec" />
         <option value="$PROJECT_DIR$/ios/Classes/XfSpeechPlugin.m" />
-        <option value="$PROJECT_DIR$/lib/xf_speech_plugin.dart" />
         <option value="$PROJECT_DIR$/example/lib/main.dart" />
+        <option value="$PROJECT_DIR$/lib/xf_speech_plugin.dart" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -90,6 +102,7 @@
     <option name="width" value="1440" />
     <option name="height" value="917" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -157,6 +170,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
@@ -186,15 +200,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565066103174</updated>
-      <workItem from="1565169085116" duration="3990000" />
+      <workItem from="1565169085116" duration="4739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3990000" />
+    <option name="totallyTimeSpent" value="4739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="23" width="1440" height="917" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
@@ -296,22 +311,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/xf_speech_plugin.dart">
+    <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+        <state relative-caret-position="616">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
+    <entry file="file://$PROJECT_DIR$/lib/xf_speech_plugin.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="2254">
+          <caret line="161" selection-start-line="161" selection-end-line="161" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -319,8 +334,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="84">
-            <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <first_editor relative-caret-position="196">
+            <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           </first_editor>
           <second_editor />
         </state>

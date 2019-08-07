@@ -34,12 +34,6 @@ class XfSpeechPlugin {
     return _channel.invokeMethod(
       _METHOD_INITWITHAPPID, Platform.isIOS ? iosAppID : androidAppID,
     );
-
-//    await _channel.invokeMethod('initWithAppId', Platform.isIOS ? iosAppID : androidAppID);
-//    _channel.setMethodCallHandler((MethodCall call) async {
-//      print(call.method);
-//      print(call.arguments.toString());
-//    });
   }
 
   Future<void> setParameter(Map<String, dynamic> param) async {
@@ -129,36 +123,10 @@ class XfSpeechPlugin {
     return _channel.invokeMethod(_METHOD_IS_SPEAKING);
   }
 
-  /// 用完记得释放listener
   void clearListener() {
     _channel.setMethodCallHandler(null);
   }
 }
-
-
-///// 讯飞语音识别的回调映射，有flutter来决定处理所有的回调结果，
-///// 会更具有灵活性
-//class XFVoiceListener {
-//  VoidCallback onCancel;
-//  VoidCallback onEndOfSpeech;
-//  VoidCallback onBeginOfSpeech;
-//  /// error信息构成的key-value map，[filePath]是音频文件路径
-//  void Function(Map<dynamic, dynamic> error, String filePath) onCompleted;
-//  void Function(String result, bool isLast) onResults;
-//  void Function(int volume) onVolumeChanged;
-//
-//  XFVoiceListener({
-//    this.onBeginOfSpeech,
-//    this.onResults,
-//    this.onVolumeChanged,
-//    this.onEndOfSpeech,
-//    this.onCompleted,
-//    this.onCancel
-//  });
-//}
-
-
-
 
 class XfSpeechListener{
   VoidCallback onBeginOfSpeech;
@@ -169,18 +137,11 @@ class XfSpeechListener{
   void Function(String result, bool isLast) onResults;
   void Function(int volume) onVolumeChanged;
 
-
-
-
   VoidCallback onSpeakResumed;
   VoidCallback onSpeakPaused;
   VoidCallback onSpeakBegin;
-
-
-//  void Function(Map<dynamic, dynamic> error, String filePath) onCompleted;
   void Function(int p, int b, int e, String a) onBufferProgress;
   void Function(int p, int b, int e) onSpeakProgress;
-//  void Function(int volume) onVolumeChanged;
 
   XfSpeechListener({
     this.onBeginOfSpeech,
@@ -197,55 +158,6 @@ class XfSpeechListener{
     this.onSpeakProgress
   });
 }
-
-
-
-
-
-
-
-
-
-
-//class XfSpeechRecognizerListener{
-//  VoidCallback onCancel;
-//  VoidCallback onEndOfSpeech;
-//  VoidCallback onBeginOfSpeech;
-//
-//  void Function(Map<dynamic, dynamic> error, String filePath) onCompleted;
-//  void Function(String result, bool isLast) onResults;
-//  void Function(int volume) onVolumeChanged;
-//
-//  XfSpeechRecognizerListener({
-//    this.onBeginOfSpeech,
-//    this.onResults,
-//    this.onVolumeChanged,
-//    this.onEndOfSpeech,
-//    this.onCompleted,
-//    this.onCancel
-//  });
-//}
-//
-//class XfSpeechSynthesizerListener{
-//  VoidCallback onSpeakResumed;
-//  VoidCallback onSpeakPaused;
-//  VoidCallback onSpeakBegin;
-//
-//  void Function(Map<dynamic, dynamic> error, String filePath) onCompleted;
-//  void Function(int p, int b, int e, String a) onBufferProgress;
-//  void Function(int p, int b, int e) onSpeakProgress;
-//  void Function(int volume) onVolumeChanged;
-//
-//  XfSpeechSynthesizerListener({
-//    this.onSpeakBegin,
-//    this.onBufferProgress,
-//    this.onSpeakProgress,
-//    this.onVolumeChanged,
-//    this.onSpeakPaused,
-//    this.onCompleted,
-//    this.onSpeakResumed
-//  });
-//}
 
 class XFVoiceParam {
   String speech_timeout;

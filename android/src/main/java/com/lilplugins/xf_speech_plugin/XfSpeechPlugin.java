@@ -5,45 +5,13 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
-
-///** XfSpeechPlugin */
-//public class XfSpeechPlugin implements MethodCallHandler {
-//  /** Plugin registration. */
-//  public static void registerWith(Registrar registrar) {
-//    final MethodChannel channel = new MethodChannel(registrar.messenger(), "xf_speech_plugin");
-//    channel.setMethodCallHandler(new XfSpeechPlugin());
-//  }
-//
-//  @Override
-//  public void onMethodCall(MethodCall call, Result result) {
-//    if (call.method.equals("getPlatformVersion")) {
-//      result.success("Android " + android.os.Build.VERSION.RELEASE);
-//    } else {
-//      result.notImplemented();
-//    }
-//  }
-//}
-
-
-
-import android.app.Activity;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
-
-import io.flutter.plugin.common.MethodCall;
-import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
-import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 public class XfSpeechPlugin implements MethodCallHandler{
 
   private static String TAG = XfSpeechPlugin.class.getSimpleName();
   private static final String CHANNEL = "lilplugins.com/xf_speech_plugin";
-
-//  static Activity activity;
   PluginRegistry.Registrar registrar;
   XfSpeechDelegate delegate;
 
@@ -56,7 +24,6 @@ public class XfSpeechPlugin implements MethodCallHandler{
     if (registrar.activity() == null) {
       return;
     }
-//    activity = registrar.activity();
     final MethodChannel channel = new MethodChannel(registrar.messenger(), CHANNEL);
     final XfSpeechDelegate delegate = new XfSpeechDelegate(registrar.activity(),channel);
     registrar.addRequestPermissionsResultListener(delegate);
@@ -92,7 +59,6 @@ public class XfSpeechPlugin implements MethodCallHandler{
     }
 
     Log.e(TAG, call.method);
-//        MethodChannel.Result result = new MethodResultWrapper(rawResult);
     switch (call.method) {
       case METHOD_CALL_INITWITHAPPID:
         delegate.initWithAppId(call, result);  // recongnnizer & synthesizer
@@ -133,48 +99,4 @@ public class XfSpeechPlugin implements MethodCallHandler{
     }
   }
 
-//  // MethodChannel.Result wrapper that responds on the platform thread.
-//  private static class MethodResultWrapper implements MethodChannel.Result {
-//    private MethodChannel.Result methodResult;
-//    private Handler handler;
-//
-//    MethodResultWrapper(MethodChannel.Result result) {
-//      methodResult = result;
-//      handler = new Handler(Looper.getMainLooper());
-//    }
-//
-//    @Override
-//    public void success(final Object result) {
-//      handler.post(
-//              new Runnable() {
-//                @Override
-//                public void run() {
-//                  methodResult.success(result);
-//                }
-//              });
-//    }
-//
-//    @Override
-//    public void error(
-//            final String errorCode, final String errorMessage, final Object errorDetails) {
-//      handler.post(
-//              new Runnable() {
-//                @Override
-//                public void run() {
-//                  methodResult.error(errorCode, errorMessage, errorDetails);
-//                }
-//              });
-//    }
-//
-//    @Override
-//    public void notImplemented() {
-//      handler.post(
-//              new Runnable() {
-//                @Override
-//                public void run() {
-//                  methodResult.notImplemented();
-//                }
-//              });
-//    }
-//  }
 }

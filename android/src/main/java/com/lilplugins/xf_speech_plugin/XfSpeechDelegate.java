@@ -1,38 +1,34 @@
 package com.lilplugins.xf_speech_plugin;
 
 import android.Manifest;
-        import android.app.Activity;
-        import android.content.Context;
-        import android.content.pm.PackageInfo;
-        import android.content.pm.PackageManager;
-        import android.os.Build;
-        import android.os.Bundle;
-        import android.os.Environment;
-        import android.util.Log;
+import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 
-        import androidx.annotation.VisibleForTesting;
-        import androidx.core.app.ActivityCompat;
+import androidx.annotation.VisibleForTesting;
+import androidx.core.app.ActivityCompat;
 
-        import com.iflytek.cloud.ErrorCode;
-        import com.iflytek.cloud.InitListener;
-        import com.iflytek.cloud.RecognizerListener;
-        import com.iflytek.cloud.RecognizerResult;
-        import com.iflytek.cloud.Setting;
-        import com.iflytek.cloud.SpeechConstant;
-        import com.iflytek.cloud.SpeechError;
-        import com.iflytek.cloud.SpeechRecognizer;
-        import com.iflytek.cloud.SpeechSynthesizer;
-        import com.iflytek.cloud.SpeechUtility;
+import com.iflytek.cloud.ErrorCode;
+import com.iflytek.cloud.InitListener;
+import com.iflytek.cloud.RecognizerListener;
+import com.iflytek.cloud.RecognizerResult;
+import com.iflytek.cloud.Setting;
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechError;
+import com.iflytek.cloud.SpeechRecognizer;
+import com.iflytek.cloud.SpeechSynthesizer;
+import com.iflytek.cloud.SpeechUtility;
 import com.iflytek.cloud.SynthesizerListener;
 
 import java.util.ArrayList;
-        import java.util.Arrays;
-        import java.util.HashMap;
-        import java.util.Map;
+import java.util.HashMap;
+import java.util.Map;
 
-        import io.flutter.plugin.common.MethodCall;
-        import io.flutter.plugin.common.MethodChannel;
-        import io.flutter.plugin.common.PluginRegistry;
+import io.flutter.plugin.common.MethodCall;
+import io.flutter.plugin.common.MethodChannel;
+import io.flutter.plugin.common.PluginRegistry;
 
 public class XfSpeechDelegate implements PluginRegistry.RequestPermissionsResultListener {
 
@@ -55,7 +51,6 @@ public class XfSpeechDelegate implements PluginRegistry.RequestPermissionsResult
     interface PermissionManager {
         boolean isPermissionGranted(String permissionName);
         void askForPermission(String permissionName, int requestCode);
-//        boolean needRequestMicroPhonePermission();
     }
 
     @VisibleForTesting
@@ -89,39 +84,8 @@ public class XfSpeechDelegate implements PluginRegistry.RequestPermissionsResult
                     public void askForPermission(String permissionName, int requestCode) {
                         ActivityCompat.requestPermissions(activity, new String[] {permissionName}, requestCode);
                     }
-
-//                    @Override
-//                    public boolean needRequestMicroPhonePermission() {
-//                        return needRequestMicroPhonePermission();
-//                    }
                 });
     }
-
-//    boolean needRequestMicroPhonePermission() {
-//        if(this.activity == null) return false;
-//        boolean greatOrEqualM = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
-//        return greatOrEqualM && isPermissionPresentInManifest(activity, Manifest.permission.RECORD_AUDIO);
-//    }
-//
-//    boolean needRequestStoragePermission(Context context) {
-//        boolean greatOrEqualM = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
-//        boolean readP = greatOrEqualM && isPermissionPresentInManifest(context, Manifest.permission.READ_EXTERNAL_STORAGE);
-//        boolean writeP = greatOrEqualM && isPermissionPresentInManifest(context, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-//        return readP && writeP && (readP == true);
-//    }
-//
-//    private  boolean isPermissionPresentInManifest(Context context, String permissionName) {
-//        try {
-//            PackageManager packageManager = context.getPackageManager();
-//            PackageInfo packageInfo =  packageManager.getPackageInfo(context.getPackageName(), PackageManager.GET_PERMISSIONS);
-//
-//            String[] requestedPermissions = packageInfo.requestedPermissions;
-//            return Arrays.asList(requestedPermissions).contains(permissionName);
-//        } catch (PackageManager.NameNotFoundException e) {
-//            e.printStackTrace();
-//            return false;
-//        }
-//    }
 
     @Override
     public boolean onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -188,7 +152,6 @@ public class XfSpeechDelegate implements PluginRegistry.RequestPermissionsResult
                 e.printStackTrace();
             }
         }
-
 
         if (synthesizer == null) {
             Log.e(TAG, "synthesizer 为 null");
