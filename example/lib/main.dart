@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> initPlatformState() async {
     final voice = XfSpeechPlugin.instance;
-    voice.initWithAppId(iosAppID: 'your appid', androidAppID: 'your appid');
+    voice.initWithAppId(iosAppID: '5d4281f8', androidAppID: '5d4281f8');
     final param = new XFVoiceParam();
     param.domain = 'iat';
     param.asr_ptt = '0';
