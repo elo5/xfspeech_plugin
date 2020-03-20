@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49fd0067-5914-4b5b-8ce6-a1b5383e333b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/ios/Flutter/Flutter.podspec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Flutter/Flutter.podspec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,22 +76,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1592" height="425" key="GridCell.Tab.0.bottom" timestamp="1584589906970">
+    <state x="536" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584610842101">
       <screen x="0" y="23" width="1680" height="975" />
     </state>
-    <state width="1592" height="425" key="GridCell.Tab.0.bottom/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584589906970" />
-    <state width="1592" height="425" key="GridCell.Tab.0.center" timestamp="1584589906969">
+    <state x="536" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584610842101" />
+    <state width="796" height="388" key="GridCell.Tab.0.bottom" timestamp="1584676116261">
       <screen x="0" y="23" width="1680" height="975" />
     </state>
-    <state width="1592" height="425" key="GridCell.Tab.0.center/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584589906969" />
-    <state width="1592" height="425" key="GridCell.Tab.0.left" timestamp="1584589906968">
+    <state width="796" height="388" key="GridCell.Tab.0.bottom/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584676116261" />
+    <state width="796" height="388" key="GridCell.Tab.0.center" timestamp="1584676116261">
       <screen x="0" y="23" width="1680" height="975" />
     </state>
-    <state width="1592" height="425" key="GridCell.Tab.0.left/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584589906968" />
-    <state width="1592" height="425" key="GridCell.Tab.0.right" timestamp="1584589906969">
+    <state width="796" height="388" key="GridCell.Tab.0.center/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584676116261" />
+    <state width="796" height="388" key="GridCell.Tab.0.left" timestamp="1584676116260">
       <screen x="0" y="23" width="1680" height="975" />
     </state>
-    <state width="1592" height="425" key="GridCell.Tab.0.right/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584589906969" />
+    <state width="796" height="388" key="GridCell.Tab.0.left/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584676116260" />
+    <state width="796" height="388" key="GridCell.Tab.0.right" timestamp="1584676116261">
+      <screen x="0" y="23" width="1680" height="975" />
+    </state>
+    <state width="796" height="388" key="GridCell.Tab.0.right/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584676116261" />
     <state x="364" y="159" key="SettingsEditor" timestamp="1584407624123">
       <screen x="0" y="23" width="1680" height="975" />
     </state>
