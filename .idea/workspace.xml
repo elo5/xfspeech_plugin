@@ -4,14 +4,8 @@
     <list default="true" id="49fd0067-5914-4b5b-8ce6-a1b5383e333b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/xf_speech_plugin/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,22 +74,22 @@
       <screen x="0" y="23" width="1680" height="975" />
     </state>
     <state x="536" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584610842101" />
-    <state width="796" height="388" key="GridCell.Tab.0.bottom" timestamp="1584676116261">
+    <state width="796" height="76" key="GridCell.Tab.0.bottom" timestamp="1584843127527">
       <screen x="0" y="23" width="1680" height="975" />
     </state>
-    <state width="796" height="388" key="GridCell.Tab.0.bottom/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584676116261" />
-    <state width="796" height="388" key="GridCell.Tab.0.center" timestamp="1584676116261">
+    <state width="796" height="76" key="GridCell.Tab.0.bottom/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584843127527" />
+    <state width="796" height="76" key="GridCell.Tab.0.center" timestamp="1584843127526">
       <screen x="0" y="23" width="1680" height="975" />
     </state>
-    <state width="796" height="388" key="GridCell.Tab.0.center/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584676116261" />
-    <state width="796" height="388" key="GridCell.Tab.0.left" timestamp="1584676116260">
+    <state width="796" height="76" key="GridCell.Tab.0.center/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584843127526" />
+    <state width="796" height="76" key="GridCell.Tab.0.left" timestamp="1584843127525">
       <screen x="0" y="23" width="1680" height="975" />
     </state>
-    <state width="796" height="388" key="GridCell.Tab.0.left/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584676116260" />
-    <state width="796" height="388" key="GridCell.Tab.0.right" timestamp="1584676116261">
+    <state width="796" height="76" key="GridCell.Tab.0.left/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584843127525" />
+    <state width="796" height="76" key="GridCell.Tab.0.right" timestamp="1584843127526">
       <screen x="0" y="23" width="1680" height="975" />
     </state>
-    <state width="796" height="388" key="GridCell.Tab.0.right/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584676116261" />
+    <state width="796" height="76" key="GridCell.Tab.0.right/-433.-1057.1920.1057/0.23.1680.975@0.23.1680.975" timestamp="1584843127526" />
     <state x="364" y="159" key="SettingsEditor" timestamp="1584407624123">
       <screen x="0" y="23" width="1680" height="975" />
     </state>
