@@ -30,7 +30,7 @@ public class XfSpeechPlugin implements FlutterPlugin, MethodCallHandler, Activit
   private MethodChannel channel;
   private Activity mActivity;
 
-  /*
+  /*  
   XfSpeechPlugin() {
   }
 
@@ -38,18 +38,18 @@ public class XfSpeechPlugin implements FlutterPlugin, MethodCallHandler, Activit
     this.registrar = registrar;
     this.delegate = delegate;
   }
-
+  */
+  
   public static void registerWith(Registrar registrar) {
-    if (registrar.activity() == null) {
-      return;
-    }
+    final XfSpeechPlugin instance = new XfSpeechPlugin();
     final MethodChannel channel = new MethodChannel(registrar.messenger(), CHANNEL);
     final XfSpeechDelegate delegate = new XfSpeechDelegate(registrar.activity(),channel);
     registrar.addRequestPermissionsResultListener(delegate);
-    final XfSpeechPlugin instance = new XfSpeechPlugin(registrar, delegate);
+
+    instance.registrar = registrar;
+    instance.delegate = delegate;
     channel.setMethodCallHandler(instance);
   }
-  */
   
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
