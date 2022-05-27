@@ -1,35 +1,94 @@
 package com.lilplugins.xf_speech_plugin;
 
+import android.util.Log;
+import android.app.Activity;
+
+import androidx.annotation.NonNull;
+
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
-import android.util.Log;
-import io.flutter.plugin.common.PluginRegistry;
 
-public class XfSpeechPlugin implements MethodCallHandler{
+import io.flutter.plugin.common.PluginRegistry;
+import io.flutter.plugin.common.PluginRegistry.Registrar;;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.embedding.engine.plugins.activity.ActivityAware;
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
+import io.flutter.plugin.common.BinaryMessenger;
+
+
+public class XfSpeechPlugin implements FlutterPlugin, MethodCallHandler, ActivityAware{
 
   private static String TAG = XfSpeechPlugin.class.getSimpleName();
   private static final String CHANNEL = "lilplugins.com/xf_speech_plugin";
+  
   PluginRegistry.Registrar registrar;
   XfSpeechDelegate delegate;
+
+  private MethodChannel channel;
+  private Activity mActivity;
+
+  /*  
+  XfSpeechPlugin() {
+  }
 
   XfSpeechPlugin(final PluginRegistry.Registrar registrar, final XfSpeechDelegate delegate) {
     this.registrar = registrar;
     this.delegate = delegate;
   }
-
+  */
+  
   public static void registerWith(Registrar registrar) {
-    if (registrar.activity() == null) {
-      return;
-    }
+    final XfSpeechPlugin instance = new XfSpeechPlugin();
     final MethodChannel channel = new MethodChannel(registrar.messenger(), CHANNEL);
     final XfSpeechDelegate delegate = new XfSpeechDelegate(registrar.activity(),channel);
     registrar.addRequestPermissionsResultListener(delegate);
-    final XfSpeechPlugin instance = new XfSpeechPlugin(registrar, delegate);
+
+    instance.registrar = registrar;
+    instance.delegate = delegate;
     channel.setMethodCallHandler(instance);
   }
+  
+  @Override
+  public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
+    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), CHANNEL);
+    channel.setMethodCallHandler(this);
+  }
+
+  @Override
+  public void onAttachedToActivity(ActivityPluginBinding binding) {
+      onAttachedToActivity(binding.getActivity());
+      binding.addRequestPermissionsResultListener(this.delegate);
+  }
+
+  private void onAttachedToActivity(Activity activity) {
+      this.mActivity = activity;
+      this.delegate = new XfSpeechDelegate(activity, this.channel);
+  }
+
+  @Override
+  public void onDetachedFromActivityForConfigChanges() {
+
+  }
+
+  @Override
+  public void onReattachedToActivityForConfigChanges(@NonNull ActivityPluginBinding binding) {
+      onAttachedToActivity(binding);
+      binding.addRequestPermissionsResultListener(this.delegate);
+  }
+
+  @Override
+  public void onDetachedFromActivity() {
+      this.mActivity = null;
+  }
+
+  @Override
+  public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
+    channel.setMethodCallHandler(null);
+  }
+
 
   static final String METHOD_CALL_INITWITHAPPID = "initWithAppId";
   static final String METHOD_CALL_SETPARAMETER = "setParameter";
