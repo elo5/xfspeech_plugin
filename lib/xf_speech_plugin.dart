@@ -5,11 +5,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 
 class XfSpeechPlugin {
-
   static final XfSpeechPlugin instance = XfSpeechPlugin._();
   XfSpeechPlugin._();
 
-  static const MethodChannel _channel = const MethodChannel('lilplugins.com/xf_speech_plugin');
+  static const MethodChannel _channel =
+      const MethodChannel('lilplugins.com/xf_speech_plugin');
 
   // the following three methods would be called to change for both SpeechRecognizer & SpeechSynthesizer
   static const String _METHOD_INITWITHAPPID = 'initWithAppId';
@@ -28,98 +28,104 @@ class XfSpeechPlugin {
   static const String _METHOD_STOP_SPEAKING = 'stopSpeaking';
   static const String _METHOD_IS_SPEAKING = 'isSpeaking';
 
-  Future<void> initWithAppId({@required String iosAppID, @required String androidAppID}) async {
+  Future<void> initWithAppId(
+      {required String iosAppID, required String androidAppID}) async {
     assert(iosAppID != null && iosAppID.isNotEmpty);
     assert(androidAppID != null && androidAppID.isNotEmpty);
     return _channel.invokeMethod(
-      _METHOD_INITWITHAPPID, Platform.isIOS ? iosAppID : androidAppID,
+      _METHOD_INITWITHAPPID,
+      Platform.isIOS ? iosAppID : androidAppID,
     );
   }
 
   Future<void> setParameter(Map<String, dynamic> param) async {
-     _channel.invokeMethod(_METHOD_SETPARAMETER, param);
+    _channel.invokeMethod(_METHOD_SETPARAMETER, param);
   }
 
   Future<void> dispose() async {
-     _channel.invokeMethod(_METHOD_DISPOSE);
+    _channel.invokeMethod(_METHOD_DISPOSE);
   }
 
-  Future<void> startListening({XfSpeechListener listener}) async {
+  Future<void> startListening({XfSpeechListener? listener}) async {
     _channel.setMethodCallHandler((MethodCall call) async {
-
-      if (call.method == 'onBeginOfSpeech' && listener?.onBeginOfSpeech != null) {
-        listener.onBeginOfSpeech();
+      if (call.method == 'onBeginOfSpeech' &&
+          listener?.onBeginOfSpeech != null) {
+        listener!.onBeginOfSpeech!();
       }
       if (call.method == 'onCancel' && listener?.onCancel != null) {
-        listener.onCancel();
+        listener!.onCancel!();
       }
       if (call.method == 'onEndOfSpeech' && listener?.onEndOfSpeech != null) {
-        listener.onEndOfSpeech();
+        listener!.onEndOfSpeech!();
       }
       if (call.method == 'onCompleted' && listener?.onCompleted != null) {
-        listener.onCompleted(call.arguments[0], call.arguments[1]);
+        listener!.onCompleted!(call.arguments[0], call.arguments[1]);
       }
       if (call.method == 'onResults' && listener?.onResults != null) {
-        listener.onResults(call.arguments[0], call.arguments[1]);
+        listener!.onResults!(call.arguments[0], call.arguments[1]);
       }
-      if (call.method == 'onVolumeChanged' && listener?.onVolumeChanged != null) {
-        listener.onVolumeChanged(call.arguments);
+      if (call.method == 'onVolumeChanged' &&
+          listener?.onVolumeChanged != null) {
+        listener!.onVolumeChanged!(call.arguments);
       }
-
     });
-     _channel.invokeMethod(_METHOD_STARTLISTENING);
+    _channel.invokeMethod(_METHOD_STARTLISTENING);
   }
 
-
   Future<void> stopListening() async {
-     _channel.invokeMethod(_METHOD_STOPLISTENING);
+    _channel.invokeMethod(_METHOD_STOPLISTENING);
   }
 
   Future<void> cancelListenning() async {
-     _channel.invokeMethod(_METHOD_CANCELLISTENING);
+    _channel.invokeMethod(_METHOD_CANCELLISTENING);
   }
 
-  Future<void> startSpeaking({@required String string, XfSpeechListener listener}) async{
-
-    _channel.setMethodCallHandler((MethodCall call) async{
-      if (call.method == 'onSpeakBegin' && listener?.onSpeakBegin != null) {
-        listener.onSpeakBegin();
+  Future<void> startSpeaking(
+      {required String string, XfSpeechListener? listener}) async {
+    _channel.setMethodCallHandler((MethodCall call) async {
+      if (call.method == 'onSpeakBegin' && listener!.onSpeakBegin != null) {
+        listener.onSpeakBegin!();
       }
-      if (call.method == 'onBufferProgress' && listener?.onBufferProgress != null) {
-        listener.onBufferProgress(call.arguments[0],call.arguments[1],call.arguments[2],call.arguments[3]);
+      if (call.method == 'onBufferProgress' &&
+          listener?.onBufferProgress != null) {
+        listener!.onBufferProgress!(call.arguments[0], call.arguments[1],
+            call.arguments[2], call.arguments[3]);
       }
-      if (call.method == 'onSpeakProgress' && listener?.onSpeakProgress != null) {
-        listener.onSpeakProgress(call.arguments[0],call.arguments[1],call.arguments[2]);
+      if (call.method == 'onSpeakProgress' &&
+          listener?.onSpeakProgress != null) {
+        listener!.onSpeakProgress!(
+            call.arguments[0], call.arguments[1], call.arguments[2]);
       }
-      if (call.method == 'onVolumeChanged' && listener?.onVolumeChanged != null) {
-        listener.onVolumeChanged(call.arguments);
+      if (call.method == 'onVolumeChanged' &&
+          listener?.onVolumeChanged != null) {
+        listener!.onVolumeChanged!(call.arguments);
       }
       if (call.method == 'onSpeakPaused' && listener?.onSpeakPaused != null) {
-        listener.onSpeakPaused();
+        listener!.onSpeakPaused!();
       }
       if (call.method == 'onCompleted' && listener?.onCompleted != null) {
-        listener.onCompleted(call.arguments[0],call.arguments[1]);
+        listener!.onCompleted!(call.arguments[0], call.arguments[1]);
       }
       if (call.method == 'onSpeakResumed' && listener?.onSpeakResumed != null) {
-        listener.onSpeakResumed();
+        listener!.onSpeakResumed!();
       }
     });
-     _channel.invokeMethod(_METHOD_START_SPEAKING, string);
+    _channel.invokeMethod(_METHOD_START_SPEAKING, string);
   }
 
   Future<void> pauseSpeaking() async {
-     _channel.invokeMethod(_METHOD_PAUSE_SPEAKING);
+    _channel.invokeMethod(_METHOD_PAUSE_SPEAKING);
   }
 
   Future<void> resumeSpeaking() async {
-     _channel.invokeMethod(_METHOD_RESUME_SPEAKING);
+    _channel.invokeMethod(_METHOD_RESUME_SPEAKING);
   }
 
   Future<void> stopSpeaking() async {
-     _channel.invokeMethod(_METHOD_STOP_SPEAKING);
+    _channel.invokeMethod(_METHOD_STOP_SPEAKING);
   }
 
-  Future<bool> isSpeaking() async {
+  Future<bool?> isSpeaking() async {
     return _channel.invokeMethod(_METHOD_IS_SPEAKING);
   }
 
@@ -128,81 +134,79 @@ class XfSpeechPlugin {
   }
 }
 
-class XfSpeechListener{
-  VoidCallback onBeginOfSpeech;
-  VoidCallback onEndOfSpeech;
-  VoidCallback onCancel;
+class XfSpeechListener {
+  VoidCallback? onBeginOfSpeech;
+  VoidCallback? onEndOfSpeech;
+  VoidCallback? onCancel;
 
-  void Function(Map<dynamic, dynamic> error, String filePath) onCompleted;
-  void Function(String result, bool isLast) onResults;
-  void Function(int volume) onVolumeChanged;
+  void Function(Map<dynamic, dynamic> error, String filePath)? onCompleted;
+  void Function(String result, bool isLast)? onResults;
+  void Function(int volume)? onVolumeChanged;
 
-  VoidCallback onSpeakResumed;
-  VoidCallback onSpeakPaused;
-  VoidCallback onSpeakBegin;
-  void Function(int p, int b, int e, String a) onBufferProgress;
-  void Function(int p, int b, int e) onSpeakProgress;
+  VoidCallback? onSpeakResumed;
+  VoidCallback? onSpeakPaused;
+  VoidCallback? onSpeakBegin;
+  void Function(int p, int b, int e, String a)? onBufferProgress;
+  void Function(int p, int b, int e)? onSpeakProgress;
 
-  XfSpeechListener({
-    this.onBeginOfSpeech,
-    this.onResults,
-    this.onVolumeChanged,
-    this.onEndOfSpeech,
-    this.onCompleted,
-    this.onCancel,
-
-    this.onSpeakResumed,
-    this.onSpeakBegin,
-    this.onSpeakPaused,
-    this.onBufferProgress,
-    this.onSpeakProgress
-  });
+  XfSpeechListener(
+      {this.onBeginOfSpeech,
+      this.onResults,
+      this.onVolumeChanged,
+      this.onEndOfSpeech,
+      this.onCompleted,
+      this.onCancel,
+      this.onSpeakResumed,
+      this.onSpeakBegin,
+      this.onSpeakPaused,
+      this.onBufferProgress,
+      this.onSpeakProgress});
 }
 
 class XFVoiceParam {
-  String speech_timeout;
-  String domain;
-  String result_type;
-  String timeout;
-  String power_cycle;
-  String sample_rate;
-  String engine_type;
-  String local;
-  String cloud;
-  String mix;
-  String auto;
-  String text_encoding;
-  String result_encoding;
-  String player_init;
-  String player_deactive;
-  String recorder_init;
-  String recorder_deactive;
-  String speed;
-  String pitch;
-  String tts_audio_path;
-  String vad_enable;
-  String vad_bos;
-  String vad_eos;
-  String voice_name;
-  String voice_id;
-  String voice_lang;
-  String volume;
-  String tts_buffer_time;
-  String tts_data_notify;
-  String next_text;
-  String mpplayinginfocenter;
-  String audio_source;
-  String asr_audio_path;
-  String asr_sch;
-  String asr_ptt;
-  String local_grammar;
-  String cloud_grammar;
-  String grammar_type;
-  String grammar_content;
-  String lexicon_content;
-  String lexicon_name;
-  String grammar_list;
-  String nlp_version;
+  String? speech_timeout;
+  String? domain;
+  String? result_type;
+  String? timeout;
+  String? power_cycle;
+  String? sample_rate;
+  String? engine_type;
+  String? local;
+  String? cloud;
+  String? mix;
+  String? auto;
+  String? text_encoding;
+  String? result_encoding;
+  String? player_init;
+  String? player_deactive;
+  String? recorder_init;
+  String? recorder_deactive;
+  String? speed;
+  String? pitch;
+  String? tts_audio_path;
+  String? vad_enable;
+  String? vad_bos;
+  String? vad_eos;
+  String? voice_name;
+  String? voice_id;
+  String? voice_lang;
+  String? volume;
+  String? tts_buffer_time;
+  String? tts_data_notify;
+  String? next_text;
+  String? mpplayinginfocenter;
+  String? audio_source;
+  String? asr_audio_path;
+  String? asr_sch;
+  String? asr_ptt;
+  String? local_grammar;
+  String? cloud_grammar;
+  String? grammar_type;
+  String? grammar_content;
+  String? lexicon_content;
+  String? lexicon_name;
+  String? grammar_list;
+  String? nlp_version;
 
   Map<String, dynamic> toMap() {
     Map<String, dynamic> param = {
